@@ -1,0 +1,36 @@
+{
+  "service": "ai-sre-service",
+  "environment": "terraform",
+  "incident_time": "2026-03-10T20:45:05Z",
+  "severity_hint": "medium",
+  "symptoms": [
+    "CloudWatch alarm ai-sre-tf-5xx-errors entered ALARM state",
+    "CloudWatch alarm ai-sre-tf-high-response-time entered ALARM state",
+    "ALB target group returned repeated HTTP 500 responses",
+    "Average target response time exceeded 1 second"
+  ],
+  "metrics": {
+    "HTTPCode_Target_5XX_Count": 20,
+    "TargetResponseTime": 1.735016975,
+    "period_seconds": 60
+  },
+  "affected_endpoints": [
+    "/error",
+    "/slow"
+  ],
+  "recent_changes": [
+    "Application deployed through GitHub Actions",
+    "Service running on ECS Fargate behind Application Load Balancer",
+    "Infrastructure provisioned with Terraform"
+  ],
+  "logs": [
+    "GET /error returned 500 multiple times",
+    "GET /slow showed elevated response times",
+    "Gunicorn served requests successfully",
+    "Health endpoint remained healthy during tests"
+  ],
+  "notes": [
+    "500 errors were intentionally triggered for testing",
+    "Slow responses were intentionally triggered for alert validation"
+  ]
+}
