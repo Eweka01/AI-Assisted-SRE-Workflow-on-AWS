@@ -13,7 +13,7 @@ APP_ENV = os.getenv("APP_ENV", "local")
 @app.route("/", methods=["GET"])
 def home():
     return jsonify({
-        "message": "AI-Assisted SRE Workflow App",
+        "message": "AI-Assisted SRE Workflow App - deployed by GitHub Actions",
         "status": "ok",
         "version": APP_VERSION,
         "environment": APP_ENV,
