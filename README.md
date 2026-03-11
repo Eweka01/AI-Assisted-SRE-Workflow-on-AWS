@@ -1,9 +1,10 @@
 # AI-Assisted SRE Workflow on AWS
 
 ## Overview
-Built a cloud-native SRE project that deploys a containerized Python application to AWS ECS Fargate using Terraform and GitHub Actions. The project includes monitoring, alerting, incident simulation, and an AI-assisted triage workflow for analyzing service incidents.
+Built a cloud-native SRE project that deploys a containerized Python application to AWS ECS Fargate using Terraform and GitHub Actions. The project includes monitoring, alerting, incident simulation, and an AI-assisted triage workflow for analyzing service incidents. [Read the full story on Medium](https://medium.com/@oseweka1/how-i-built-an-ai-assisted-sre-workflow-on-aws-with-terraform-ecs-fargate-github-actions-b62fcdc62ee3)
 
 ## Architecture
+![alt text](diagram-export-3-11-2026-3_21_48-PM.png)
 - Python Flask application
 - Docker container
 - Amazon ECR
